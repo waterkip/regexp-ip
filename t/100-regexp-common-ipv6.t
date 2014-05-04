@@ -1,7 +1,7 @@
 # perl
 
 use Test::More;
-use Regexp::IPv6 qw($IPv6_re);
+use Regexp::Common::IP qw($IPv6_re);
 
 my $re = qr/^$IPv6_re$/;
 

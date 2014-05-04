@@ -1,7 +1,11 @@
 Changes
+lib/Regexp/Common/IP.pm
 Makefile.PL
-MANIFEST
+MANIFEST			This list of files
+MANIFEST.SKIP
+META.yml
 README
-t/Regexp-IPv6.t
-lib/Regexp/IPv6.pm
-META.yml                                 Module meta-data (added by MakeMaker)
+README.md
+t/000-pacakge.t
+t/100-regexp-common-ipv4.t
+t/100-regexp-common-ipv6.t
