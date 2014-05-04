@@ -1,39 +1,33 @@
-# -*- Mode: Perl -*-
+# perl
 
-use Test::More tests => 198;
-
+use Test::More;
 use Regexp::IPv6 qw($IPv6_re);
 
-my $good = 1;
-
 my $re = qr/^$IPv6_re$/;
-my $nare = qr/($IPv6_re)/;
 
 while (<DATA>) {
     chomp;
     s/\s*#.*//;
     next if m/^$/;
+
     if (/^GOOD/) {
-	$good = 1;
-	next;
+        $good = 1;
+        next;
     }
     if (/^BAD/) {
-	$good = 0;
-	next;
+        $good = 0;
+        next;
     }
 
     if ($good) {
-	ok($_ =~ $re, "good $_");
-    TODO: if (0) {
-            # local $TODO = "maximize match not implemented yet";
-            ok(($_ =~ $nare and $1 eq $_), "full match $_")
-                or diag("text: $_, matched: $1");
-        };
+        ok($_ =~ $re, "good $_");
     }
     else {
-	ok($_ !~ $re, "bad $_");
+        ok($_ !~ $re, "bad $_");
     }
 }
+
+done_testing;
 
 # most of the samples below were taken from the validate_ipv6.rb
 # script by Christoph Petschnig (Michael Erickson pointed me there).
@@ -46,6 +40,7 @@ while (<DATA>) {
 __DATA__
 
 GOOD:
+::
 ::127.0.0.1
 ::1
 2001:0db8:85a3:0000:0000:8a2e:0370:7334
@@ -153,7 +148,6 @@ fe80::1
 
 BAD:
 127.0.0.1
-::
 :
 2001:0000:1234:0000:0000:C1C0:ABCD:0876 0
 2001:0000:1234: 0000:0000:C1C0:ABCD:0876
@@ -247,3 +241,7 @@ ldkfj
 ::ffff:2.3.4
 ::ffff:257.1.2.3
 1.2.3.4
+fe80:0000:0000:0000:0204:61ff:254.157.241.086
+1111:2222:3333:4444:5555:6666:00.00.00.00
+1111:2222:3333:4444:5555:6666:000.000.000.000
+
