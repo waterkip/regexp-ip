@@ -4,7 +4,6 @@ Makefile.PL
 MANIFEST			This list of files
 MANIFEST.SKIP
 META.yml
-README
 README.md
 t/000-pacakge.t
 t/100-regexp-common-ipv4.t
