@@ -1,13 +1,16 @@
 NAME
+
     Regexp::Common::IP - Regular expression for IPv4 and IPv6 addresses
 
 SYNOPSIS
+
       use Regexp::Common::IP qw($IPv4_re $IPv6_re);
 
       $address =~ /^$IPv4_re$/ and print "IPv4 address\n";
       $address =~ /^$IPv6_re$/ and print "IPv6 address\n";
 
 DESCRIPTION
+
     This module exports the $IPv6_re regular expression that matches any
     valid IPv6 address as described in "RFC 2373 - 2.2 Text Representation
     of Addresses". Any string not compliant with such RFC will be rejected.
@@ -17,7 +20,8 @@ DESCRIPTION
     Additionally, this module also exports the $IPv4_re regular expression.
 
 COPYRIGHT AND LICENSE
-    Copyright (C) 2009, 2010 by Salvador Fandiño <sfandino@yahoo.com>
+
+    Copyright (C) 2009, 2010 by Salvador Fandiï¿½o <sfandino@yahoo.com>
 
     Copyright (C) 2014 by Wesley Schwengle <wesley@schwengle.net>
 
@@ -30,5 +34,6 @@ COPYRIGHT AND LICENSE
     allowed to copy it verbating in your program.
 
 SEE ALSO
+
     Regexp::IPv6
 
