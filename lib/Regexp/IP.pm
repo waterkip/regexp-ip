@@ -1,4 +1,4 @@
-package Regexp::Common::IP;
+package Regexp::IP;
 use strict;
 use warnings;
 
@@ -33,11 +33,11 @@ __END__
 
 =head1 NAME
 
-Regexp::Common::IP - Regular expression for IPv4 and IPv6 addresses
+Regexp::IP - Regular expression for IPv4 and IPv6 addresses
 
 =head1 SYNOPSIS
 
-  use Regexp::Common::IP qw($IPv4_re $IPv6_re);
+  use Regexp::IP qw($IPv4_re $IPv6_re);
 
   $address =~ /^$IPv4_re$/ and print "IPv4 address\n";
   $address =~ /^$IPv6_re$/ and print "IPv6 address\n";

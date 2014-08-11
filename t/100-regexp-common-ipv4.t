@@ -1,7 +1,7 @@
 # perl
 
 use Test::More;
-use Regexp::Common::IP qw($IPv4_re);
+use Regexp::IP qw($IPv4_re);
 
 my $re = qr/^$IPv4_re$/;
 
