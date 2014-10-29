@@ -52,6 +52,10 @@ To match full strings use C</^$IPv6_re$/>.
 
 Additionally, this module also exports the $IPv4_re regular expression.
 
+=head1 FORK
+
+This is a fork of L<Regexp::IPv6> because the original work doesn't want to include C<::> as a valid IPv6 address.
+
 =head1 COPYRIGHT AND LICENSE
 
 Copyright (C) 2009, 2010 by Salvador FandiE<ntilde>o  E<lt>sfandino@yahoo.comE<gt>
